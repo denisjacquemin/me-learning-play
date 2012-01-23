@@ -12,7 +12,7 @@ public class Application extends Controller {
   }
   
   public static Result newForm() {
-      return ok();
+      return ok(newForm.render());
   }
   
 }
