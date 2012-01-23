@@ -1,7 +1,10 @@
-@(message: String)
+@(message: String) 
+@*Template parameters must be declared on the first line of the template file*@
 
-@main("Welcome to Play 2.0 beta") {
-    
-    @play20.welcome(message)
-    
+@import shared._
+
+
+@main("Templating System use a layout") {
+    @messages("warning") { Success Message }
+    @play20.welcome(message)   
 }
