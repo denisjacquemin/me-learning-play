@@ -1,0 +1,13 @@
+@(userForm: Form[Users.User])
+
+@main("Testing forms with play") {
+    
+    @helper.form(routes.Users.create) {
+        
+        <input type="firstname" name="firstname" placeholder="firstname" value="@userForm("firstname").value">
+        <br>
+        <input type="lastname" name="lastname" placeholder="lastname" value="@userForm("lastname").value">
+        <br>
+        <button type="submit">Create</button>        
+    }
+}
